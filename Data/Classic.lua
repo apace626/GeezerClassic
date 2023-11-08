@@ -4,6 +4,7 @@ local function S(id)
     local name, _, icon = GetSpellInfo(id)
     --print(name, _, icon)
     if not name then
+        --print('Missing Spell: ', id)
         return "[Spell]"
     else
         return string.format("|T%s:0|t|cff71d5ff%s|r", icon, name)

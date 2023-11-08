@@ -1,10 +1,15 @@
 -- ns = namespace
--- _ = addon name
-local _, ns = ...
+-- addonName = addon name
+local addonName, ns = ...
 
 ns.data = {}
 
-
+-- 1. Pick HELLOWORLD as the unique identifier.
+-- 2. Pick /hiw and /hellow as slash commands (/hi and /hello are actual emotes)
+SLASH_GEEZER1, SLASH_GEEZER2 = '/gz', '/geezer'; -- 3.
+function SlashCmdList.GEEZER(msg, editBox) -- 4.
+    InterfaceOptionsFrame_OpenToCategory(addonName)
+end
 
 function ns:ToggleRandom()
     if ns:IsFrameShown() then

@@ -177,12 +177,12 @@ function ns:BuildOptionsFrame()
     InterfaceOptions_AddCategory(panel)  -- see InterfaceOptions API
 
     -- add widgets to the panel as desired
-    -- local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalLarge")
-    -- title:SetPoint("TOP")
-    -- title:SetText("MyAddOn")
+    local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalLarge")
+    title:SetPoint("TOPLEFT")
+    title:SetText("Geezer")
 
     local btn = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
-	btn:SetPoint("TOPLEFT")
+	btn:SetPoint("TOPLEFT", 0, -40)
 	btn:SetText("Show/Hide")
 	btn:SetWidth(150)
 	btn:SetScript("OnClick", function()
@@ -190,18 +190,38 @@ function ns:BuildOptionsFrame()
 	end)
 
     local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
-    dropDown:SetPoint("TOPLEFT", -20, -40)
+    dropDown:SetPoint("TOPLEFT", -20, -80)
     UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
     -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
-    UIDropDownMenu_SetText(dropDown, "Classic")
+    UIDropDownMenu_SetText(dropDown, "Select Classic Instance")
     UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
 
-    local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
-    dropDown:SetPoint("TOPLEFT", 200, -40)
-    UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
-    -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
-    UIDropDownMenu_SetText(dropDown, "WotLK")
-    UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
+    local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalSmall")
+    title:SetPoint("TOPLEFT", 0, -130)
+    title:SetText("Slash Commands")
+    
+    local title = panel:CreateFontString("ARTWORK", nil, "GameTooltipTextSmall")
+    title:SetPoint("TOPLEFT", 0, -150)
+    title:SetText("/gz")
+
+    local title = panel:CreateFontString("ARTWORK", nil, "GameTooltipTextSmall")
+    title:SetPoint("TOPLEFT", 0, -160)
+    title:SetText("/geezer")
+
+    local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalSmall")
+    title:SetPoint("TOPLEFT", 0, -200)
+    title:SetText("If you would like to contribute by editing notes or reporting bugs. Please send an email to:")
+
+    local title = panel:CreateFontString("ARTWORK", nil, "GameTooltipTextSmall")
+    title:SetPoint("TOPLEFT", 0, -220)
+    title:SetText("wow-geezer@gmail.com")
+
+    -- local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
+    -- dropDown:SetPoint("TOPLEFT", 200, -40)
+    -- UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
+    -- -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
+    -- UIDropDownMenu_SetText(dropDown, "WotLK")
+    -- UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
 
 
 end

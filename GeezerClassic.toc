@@ -1,4 +1,4 @@
-## Interface: 30403
+## Interface: 11404
 ## Version: 1.0.0
 ## Title: Geezer
 ## Notes: Simple notes for encounters
@@ -13,7 +13,6 @@ Events.lua
 Frame2.lua
 
 Geezer2.lua
-ldb.lua
 
 
 
