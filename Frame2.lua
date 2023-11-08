@@ -144,31 +144,40 @@ function WPDropDownDemo_Menu(frame, level, menuList)
         info.func = WPDropDownDemo_OnClick
 
         local instanceData = ns.data
-
+        local dungeonsTable = { }
+        local raidsTable = { }
+        
         for key, item in pairs(instanceData) do
-            --print(item.name)
-
-            info.text, info.arg1 = item.name, key
-            UIDropDownMenu_AddButton(info)
-
-            for key2, item2 in pairs(instanceData[key]) do
-
-                if item2.bossName then
-                    --print(item2.bossName)
-                    --if string.find(string.upper(item2.bossName), string.upper(query), 1, true) then
-                        --self:InitializeBossDropdown(key)
-                        --self:ShowNote(key, item2.npcID, nil)
-                        --matchFound = true
-                        --return
-                    --end
-                end
+            if item.instanceType == 1 then
+                table.insert(dungeonsTable, { id = key, name = item.name })
+            else
+                table.insert(raidsTable, { id = key, name = item.name })
             end
         end
+
+        table.sort(dungeonsTable, sortbyName)
+        table.sort(raidsTable, sortbyName)
+
+        for key, item in ipairs(dungeonsTable) do
+            info.text, info.arg1 = item.name, item.id
+            UIDropDownMenu_AddButton(info)
+        end
+
+        UIDropDownMenu_AddSeparator()
+
+        for key, item in ipairs(raidsTable) do
+            info.text, info.arg1 = item.name, item.id
+            UIDropDownMenu_AddButton(info)
+        end
+
 end
 
-function ns:BuildOptionsFrame()
+function sortbyName(a,b)
+    print(a,b)
+    return a.name < b.name
+  end
 
-   
+function ns:BuildOptionsFrame()
 
     local panel = CreateFrame("Frame")
     panel.name = addonName               -- see panel fields

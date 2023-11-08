@@ -19,6 +19,7 @@ function ns:ClassicInitializeData()
     -- Shadowfang Keep
     ns.data[33] = {
         name = "Shadowfang Keep",
+        instanceType = 1,
         {
             npcID = 46962,
             encounterID = 1069, 
@@ -70,6 +71,7 @@ function ns:ClassicInitializeData()
     -- The Stockade
     ns.data[34] = {
         name = "The Stockade",
+        instanceType = 1,
         {
             npcID = 1696,
             encounterID = 0, 
@@ -135,6 +137,7 @@ function ns:ClassicInitializeData()
     -- Deadmines
     ns.data[36] = {
         name = "Deadmines",
+        instanceType = 1,
         {
             npcID = 644,
             encounterID = 0, 
@@ -222,6 +225,7 @@ function ns:ClassicInitializeData()
     -- Wailing Caverns
     ns.data[43] = {
         name = "Wailing Caverns",
+        instanceType = 1,
         {
             npcID = 3671,
             encounterID = 585, 
@@ -299,6 +303,7 @@ function ns:ClassicInitializeData()
     -- Razorfen Kraul
     ns.data[47] = {
         name = "Razorfen Kraul",
+        instanceType = 1,
         {
             npcID = 74948,
             encounterID = 438, 
@@ -353,6 +358,7 @@ function ns:ClassicInitializeData()
     -- Blackfathom Deeps
     ns.data[48] = {
         name = "Blackfathom Deeps",
+        instanceType = 1,
         {
             npcID = 4887,
             encounterID = 1667, 
@@ -432,6 +438,7 @@ function ns:ClassicInitializeData()
     -- Uldaman
     ns.data[70] = {
         name = "Uldaman",
+        instanceType = 1,
         {
             npcID = 6910,
             encounterID = 547, 
@@ -514,6 +521,7 @@ function ns:ClassicInitializeData()
     -- Gnomeregan
     ns.data[90] = {
         name = "Gnomeregan",
+        instanceType = 1,
         {
             npcID = 6229,
             encounterID = 381, 
@@ -565,6 +573,7 @@ function ns:ClassicInitializeData()
     -- The Temple of Atal'hakkar
     ns.data[109] = {
         name = "The Temple of Atal'hakkar",
+        instanceType = 1,
         {
             npcID = 8443,
             encounterID = 492, 
@@ -600,6 +609,7 @@ function ns:ClassicInitializeData()
     -- Razorfen Downs
     ns.data[129] = {
         name = "Razorfen Downs",
+        instanceType = 1,
         {
             npcID = 74347,
             encounterID = 1663, 
@@ -654,6 +664,7 @@ function ns:ClassicInitializeData()
     -- Zul'Farrak
     ns.data[209] = {
         name = "Zul'Farrak",
+        instanceType = 1,
         {
             npcID = 7273,
             encounterID = 594, 
@@ -723,6 +734,7 @@ function ns:ClassicInitializeData()
     -- Lower Blackrock Spire
     ns.data[229] = {
         name = "Lower Blackrock Spire",
+        instanceType = 1,
         {
             npcID = 9196,
             encounterID = 267, 
@@ -811,6 +823,7 @@ function ns:ClassicInitializeData()
     -- Blackrock Depths
     ns.data[230] = {
         name = "Blackrock Depths",
+        instanceType = 1,
         {
             npcID = 9502,
             encounterID = 239, 
@@ -988,6 +1001,7 @@ function ns:ClassicInitializeData()
     -- Onyxia's Lair
     ns.data[249] = {
         name = "Onyxia's Lair",
+        instanceType = 2,
         {
             npcID = 41270,
             encounterID = 1084, 
@@ -997,42 +1011,10 @@ function ns:ClassicInitializeData()
         },
     }
     
-    -- Zul'Gurub
-    ns.data[309] = {
-        name = "Zul'Gurub",
-        {
-            npcID = 999999,
-            encounterID = 788, 
-            bossName= "Cache of Madness - Gri'lek",
-            notes = {
-            }
-        },
-        {
-            npcID = 999999,
-            encounterID = 788, 
-            bossName= "Cache of Madness - Hazza'rah",
-            notes = {
-            }
-        },
-        {
-            npcID = 999999,
-            encounterID = 788, 
-            bossName= "Cache of Madness - Renataki",
-            notes = {
-            }
-        },
-        {
-            npcID = 999999,
-            encounterID = 788, 
-            bossName= "Cache of Madness - Wushoolay",
-            notes = {
-            }
-        },
-    }
-    
     -- Stratholme
     ns.data[329] = {
         name = "Stratholme",
+        instanceType = 1,
         {
             npcID = 10558,
             encounterID = 473, 
@@ -1159,6 +1141,7 @@ function ns:ClassicInitializeData()
     -- Maraudon
     ns.data[349] = {
         name = "Maraudon",
+        instanceType = 1,
         {
             npcID = 13282,
             encounterID = 422, 
@@ -1240,6 +1223,7 @@ function ns:ClassicInitializeData()
     -- Ragefire Chasm
     ns.data[389] = {
         name = "Ragefire Chasm",
+        instanceType = 1,
         {
             npcID = 61408,
             encounterID = 1443, 
@@ -1281,6 +1265,7 @@ function ns:ClassicInitializeData()
     -- Molten Core
     ns.data[409] = {
         name = "Molten Core",
+        instanceType = 2,
         {
             npcID = 11988,
             encounterID = 670, 
@@ -1356,6 +1341,7 @@ function ns:ClassicInitializeData()
     -- Dire Maul
     ns.data[429] = {
         name = "Dire Maul",
+        instanceType = 1,
         {
             npcID = 11490,
             encounterID = 343, 
@@ -1522,6 +1508,7 @@ function ns:ClassicInitializeData()
     -- Blackwing Lair
     ns.data[469] = {
         name = "Blackwing Lair",
+        instanceType = 2,
         {
             npcID = 12435,
             encounterID = 610, 
@@ -1583,6 +1570,7 @@ function ns:ClassicInitializeData()
     -- Ruins of Ahn'Qiraj
     ns.data[509] = {
         name = "Ruins of Ahn'Qiraj",
+        instanceType = 2,
         {
             npcID = 15348,
             encounterID = 718, 
@@ -1630,6 +1618,7 @@ function ns:ClassicInitializeData()
     -- Temple of Ahn'Qiraj
     ns.data[531] = {
         name = "Temple of Ahn'Qiraj",
+        instanceType = 2,
         {
             npcID = 15263,
             encounterID = 709, 
@@ -1698,6 +1687,7 @@ function ns:ClassicInitializeData()
     -- Naxxramas
     ns.data[533] = {
         name = "Naxxramas",
+        instanceType = 2,
         {
             npcID = 15956,
             encounterID = 1107, 
@@ -1806,8 +1796,9 @@ function ns:ClassicInitializeData()
     }
     
     -- Zul'Gurub
-    ns.data[859] = {
+    ns.data[1977] = {
         name = "Zul'Gurub",
+        instanceType = 2,
         {
             npcID = 52155,
             encounterID = 1178, 
@@ -1848,6 +1839,7 @@ function ns:ClassicInitializeData()
     -- Scarlet Monastery
     ns.data[1004] = {
         name = "Scarlet Monastery",
+        instanceType = 1,
         {
             npcID = 59223,
             encounterID = 1424, 
@@ -1884,6 +1876,7 @@ function ns:ClassicInitializeData()
     -- Scholomance
     ns.data[1007] = {
         name = "Scholomance",
+        instanceType = 1,
         {
             npcID = 58633,
             encounterID = 1426, 
@@ -1937,6 +1930,7 @@ function ns:ClassicInitializeData()
     -- Upper Blackrock Spire
     ns.data[1358] = {
         name = "Upper Blackrock Spire",
+        instanceType = 1,
         {
             npcID = 76413,
             encounterID = 1761, 
