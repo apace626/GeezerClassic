@@ -519,7 +519,7 @@ function ns:ClassicInitializeData()
             notes = {
                 "Start fight by talking to the Gnome at back of room.",
                 "Defeat waves of adds before the boss appears.",
-                "Tank'N'Spank",
+                "Tank and Spank",
             }
         },
         {
@@ -528,7 +528,7 @@ function ns:ClassicInitializeData()
             bossName= "Viscous Fallout",
             notes = {
                 "Careful of mobs nearby before pulling boss. Group gets poison ticks on them.",
-                "Tank'N'Spank",
+                "Tank and Spank",
             }
         },
         {
@@ -545,101 +545,112 @@ function ns:ClassicInitializeData()
             encounterID = 382, 
             bossName= "Mekgineer Thermaplugg",
             notes = {
-                "Interrupt "..S(93655)..", this knocks back.",
+                "Interrupt "..S(11130)..", this knocks back.",
                 "Keep moving to avoid Walking Bombs.",
             }
         },
     }
     
-    -- The Temple of Atal'hakkar
-    ns.data[109] = {
-        name = "The Temple of Atal'hakkar",
-        instanceType = 1,
-        {
-            npcID = 8443,
-            encounterID = 492, 
-            bossName= "Avatar of Hakkar",
-            notes = {
-                ""..S(25852).." will stun you",
-                "Boss will give a player the "..S(188541).." debuff making them attack you",
-            }
-        },
-        {
-            npcID = 5710,
-            encounterID = 488, 
-            bossName= "Jammal'an the Prophet",
-            notes = {
-                "Interrupt "..S(232670).." from Ogom",
-                "Avoid standing in fire patches.",
-                "Move away from the "..S(8376)..", it will root you",
-                ""..S(12480).." will hex a player, they will attack the party.",
-            }
-        },
-        {
-            npcID = 5709,
-            encounterID = 493, 
-            bossName= "Shade of Eranikus",
-            notes = {
-                "Face the dragons away from the party",
-                "Dodge the frontal "..S(163338).." damaging all in front.",
-                S(11019).." will knock you back."
-            }
-        },
-    }
+    -- -- The Temple of Atal'hakkar
+    -- ns.data[109] = {
+    --     name = "The Temple of Atal'hakkar",
+    --     instanceType = 1,
+    --     {
+    --         npcID = 8443,
+    --         encounterID = 492, 
+    --         bossName= "Avatar of Hakkar",
+    --         notes = {
+    --             ""..S(25852).." will stun you",
+    --             "Boss will give a player the "..S(188541).." debuff making them attack you",
+    --         }
+    --     },
+    --     {
+    --         npcID = 5710,
+    --         encounterID = 488, 
+    --         bossName= "Jammal'an the Prophet",
+    --         notes = {
+    --             "Interrupt "..S(232670).." from Ogom",
+    --             "Avoid standing in fire patches.",
+    --             "Move away from the "..S(8376)..", it will root you",
+    --             ""..S(12480).." will hex a player, they will attack the party.",
+    --         }
+    --     },
+    --     {
+    --         npcID = 5709,
+    --         encounterID = 493, 
+    --         bossName= "Shade of Eranikus",
+    --         notes = {
+    --             "Face the dragons away from the party",
+    --             "Dodge the frontal "..S(163338).." damaging all in front.",
+    --             S(11019).." will knock you back."
+    --         }
+    --     },
+    -- }
     
     -- Razorfen Downs
     ns.data[129] = {
         name = "Razorfen Downs",
         instanceType = 1,
         {
-            npcID = 74347,
+            npcID = 7355,
+            encounterID = 1663, 
+            bossName= "Tuten'kash",
+            notes = {
+                "Ring the gong to start the event. Kill waves of mobs.",
+                "Tank and Spank"
+            }
+        },
+        {
+            npcID = 7357,
             encounterID = 1663, 
             bossName= "Mordresh Fire Eye",
             notes = {
-                "Kill all adds.",
-                "Interrupt "..S(150001)..".",
-                "Boss will "..S(150067).."s, avoid the fire balls and never stand in between them",
+                "Clear all of the skeletons dancing beside the bone pile.",
+                "The last pack of skeletons will pull the boss.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 74434,
-            encounterID = 1666, 
+            npcID = 8567,
+            encounterID = 1663, 
+            bossName= "Glutton",
+            notes = {
+                "Stay out of "..S(12627),
+                "Tank will take heavy damage during "..S(12795)
+            }
+        },
+        {
+            npcID = 7354,
+            encounterID = 1663, 
+            bossName= "Ragglesnout (Rare)",
+            notes = {
+                "Be careful if tank or healer get mind controlled - "..S(7645),
+                "Interrupt "..S(12039)..".",
+                "Interrupt "..S(11659).."."
+            }
+        },
+        {
+            npcID = 7358,
+            encounterID = 1663, 
             bossName= "Amnennar the Coldbringer",
             notes = {
-                "Tank the boss near green circular pools of "..S(150664)..", you should stand in it as it will heal you.",
-                "Anyone affected by "..S(150679).." should run into the pool to stun the boss.",
-                "Move away from frost balls of "..S(151810)..".",
+                "Face boss away from group for "..S(13009),
+                "Group stack on boss for "..S(15531),
+                "KIll add from "..S(12642)..".",
+                "Interrupt "..S(15530).."."
             }
         },
         {
-            npcID = 74412,
-            encounterID = 1662, 
-            bossName= "Aarux",
+            npcID = 7356,
+            encounterID = 1663, 
+            bossName= "Plaguemaw the Rotting (Optional Event)",
             notes = {
-                "When you get pulled to the boss by "..S(150072)..", Run Away.",
-                "Use a cooldown for "..S(150082).." to help the healer.",
+                "Final boss of the Belnistrasz escort event.",
+                "Kill adds",
+                "Tank and Spank"
             }
         },
-        {
-            npcID = 74435,
-            encounterID = 1664, 
-            bossName= "Mushlump",
-            notes = {
-                "Use mitigation/cooldown for Smack Down",
-                "Avoid the green vomit frontal cone "..S(149851)..",.",
-                "Don't stand in vomit zones.",
-            }
-        },
-        {
-            npcID = 74875,
-            encounterID = 1665, 
-            bossName= "Death Speaker Blackthorn",
-            notes = {
-                "Avoid the frontal cone "..S(151962)..".",
-                "Boss will "..S(150601)..". They interrupt spell casting & and will knock you back",
-                "Interrupt "..S(150616).." & "..S(150550)..".",
-            }
-        },
+
     }
     
     -- Zul'Farrak
@@ -651,6 +662,8 @@ function ns:ClassicInitializeData()
             encounterID = 594, 
             bossName= "Gahz'rilla",
             notes = {
+                "Clear adds from room.",
+                "Tank boss with tank's back against wall.",
                 ""..S(11131).." will slow you down",
                 ""..S(11836).." is a stun ability.",
                 "Move away from "..S(11902)..", this is a knockback.",
@@ -661,10 +674,8 @@ function ns:ClassicInitializeData()
             encounterID = 595, 
             bossName= "Antu'sul",
             notes = {
-                "Kill the adds first.",
-                "Kill the Greater Healing Ward & "..S(8376).."s.",
                 "Boss uses variety of shaman spells, interrupt the heals.",
-                "At 75% & 25% summons "..S(11894).." to fight, kill them quickly.",
+                "Summons "..S(11894).." to fight, kill them quickly.",
             }
         },
         {
@@ -672,9 +683,9 @@ function ns:ClassicInitializeData()
             encounterID = 596, 
             bossName= "Theka the Martyr",
             notes = {
-                "The scarabs will attack when you pull the boss",
+                "The scarabs will attack when you pull the boss. Focus on boss.",
                 "Interrupt "..S(8600).." ",
-                "At 30% the boss transforms making him immune to physical attacks and shadow magic",
+                "At 30% the boss transforms making him immune to physical attacks and shadow magic.",
             }
         },
         {
@@ -690,11 +701,21 @@ function ns:ClassicInitializeData()
             }
         },
         {
+            npcID = 10082,
+            encounterID = 597, 
+            bossName= "Zerillis",
+            notes = {
+                "Pull into melee range (you might need to LOS)",
+                "Tank and Spank"
+            }
+        },
+        {
             npcID = 7796,
             encounterID = 598, 
             bossName= "Nekrum & Sezz'ziz",
             notes = {
                 "The prisoners help you fight the trolls & bosses.",
+                "Kill Nekrum first.",
                 "Nekrum: Interrupt "..S(8600)..".",
                 "Sezz'ziz: Interrupt "..S(12739)..", "..S(8362).." & "..S(12039)..".",
                 ""..S(13704).." will fear you.",
@@ -705,9 +726,26 @@ function ns:ClassicInitializeData()
             encounterID = 600, 
             bossName= "Chief Ukorz Sandscalp",
             notes = {
-                "Ruuzlu will aid the boss in this fight.",
+                "Ruuzlu will aid the boss in this fight. Kill first.",
                 "Face the boss away from the party to avoid "..S(15496).." and "..S(11837).."",
-                "Boss will "..S(8269).."",
+                "Boss will "..S(8269).." with "..S(7366),
+            }
+        },
+        {
+            npcID = 7795,
+            encounterID = 600, 
+            bossName= "Hydromancer Velratha",
+            notes = {
+                "Pull boss ALONE, otherwise a wipe is likely.",
+                "Tank and Spank"
+            }
+        },
+        {
+            npcID = 7604,
+            encounterID = 600, 
+            bossName= "Sergeant Bly",
+            notes = {
+                "Boss is accompanied by 2 adds. Prioritize Oro and Murta before boss."
             }
         },
     }
@@ -721,7 +759,8 @@ function ns:ClassicInitializeData()
             encounterID = 267, 
             bossName= "Highlord Omokk",
             notes = {
-                ""..S(110762).." will knock you back.",
+                "Kill adds. You can CC both and kill boss. Or CC 1 and kill other before boss.",
+                ""..S(18945).." will knock you back. Tank against wall.",
                 "At 50% HP the boss will "..S(8269).."",
             }
         },
@@ -730,7 +769,8 @@ function ns:ClassicInitializeData()
             encounterID = 268, 
             bossName= "Shadow Hunter Vosh'gajin",
             notes = {
-                "Interrupt "..S(16098)..", if not, use a cooldown to help the healer.",
+                "Kill adds first.",
+                "Interrupt or cleanse "..S(16098)..", if not, use a cooldown to help the healer.",
                 "The boss will turn someone in a frog with "..S(16097).."",
             }
         },
@@ -739,9 +779,8 @@ function ns:ClassicInitializeData()
             encounterID = 269, 
             bossName= "War Master Voone",
             notes = {
+                "Give tank time to aggro.",
                 "Face the boss away from the party to avoid "..S(15284).."",
-                ""..S(15618).." and "..S(16075).." will stun you.",
-                ""..S(10966).." will knock you back",
             }
         },
         {
@@ -749,7 +788,8 @@ function ns:ClassicInitializeData()
             encounterID = 270, 
             bossName= "Mother Smolderweb",
             notes = {
-                ""..S(16104).." will stun you",
+                "Face boss away from group",
+                ""..S(16104).." is a AOE front cone stun.",
                 "Stay spread out to avoid poisoning others with "..S(16468).."",
                 "When the boss is dead, she will "..S(16103).."",
             }
@@ -760,6 +800,8 @@ function ns:ClassicInitializeData()
             bossName= "Urok Doomhowl",
             notes = {
                 "Kill waves of ogres until boss spawns.",
+                "Combine your Omokk's Head with Roughshod Pike and place it on the Tribute Pile to summon the boss.",
+                "Every 30 seconds, you can click on the pike while targeting an ogre to insta-kill single ogre from a wave.",
                 ""..S(16508).." will fear you.",
             }
         },
@@ -777,7 +819,8 @@ function ns:ClassicInitializeData()
             encounterID = 274, 
             bossName= "Halycon",
             notes = {
-                "Tank'N'Spank",
+                "Tanks, pick up Halycon while the group kills the pup adds.",
+                "Tanka and Spank",
                 "When you kill Halycon, Gizrul, the next boss, will come in to fight you.",
             }
         },
@@ -786,7 +829,7 @@ function ns:ClassicInitializeData()
             encounterID = 273, 
             bossName= "Gizrul the Slavener",
             notes = {
-                "Tank'N'Spank",
+                "Tank and Spank",
                 "Boss will "..S(8269).." after 30 seconds.",
             }
         },
@@ -795,8 +838,8 @@ function ns:ClassicInitializeData()
             encounterID = 275, 
             bossName= "Overlord Wyrmthalak",
             notes = {
-                "Face the boss away from the party to avoid "..S(15284).."",
-                "Dodge "..S(12887)..", a frontal cone with knockback",
+                "Face the boss away from the party with back against wall".,
+                "He will summon adds during the fight when he reaches 50% health."
             }
         },
     }
