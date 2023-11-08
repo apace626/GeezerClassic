@@ -10,19 +10,41 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "PLAYER_ENTERING_WORLD" then
         ns:PLAYER_ENTERING_WORLD(...)
     elseif event == "ENCOUNTER_START" then
-        print('ENCOUNTER START')
+        ns:ENCOUNTER_START(...)
     elseif event == "UNIT_TARGET" then
         ns:UNIT_TARGET(...)
-    elseif event == "UPDATE_INSTANCE_INFO" then        
+    elseif event == "UPDATE_INSTANCE_INFO" then
+        ns:UPDATE_INSTANCE_INFO(event)
     end
 end)
 
 function ns:PLAYER_ENTERING_WORLD(isInitialLogin, isReloadingUi)
     print("E:PLAYER_ENTERING_WORLD", isInitialLogin, isReloadingUi)
-    if IsInInstance() then
-        RequestRaidInfo() -- will trigger UPDATE_INSTANCE_INFO event
+    inInstance, instanceType = IsInInstance()
+    print(inInstance)
+    --if IsInInstance() then
+    if inInstance then
+        --RequestRaidInfo() -- will trigger UPDATE_INSTANCE_INFO event
+
+        --name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
+
+        -- self.currentInstanceID = instanceID
+        -- self.currentDifficulty = difficultyName
+
+        -- print("Name: ", name)
+        -- print("Instance Type: ", instanceType)
+        -- print("Difficulty: ", difficultyName)
+        -- print("Difficulty ID: ", difficultyID)
+        -- print("Instance ID: ", instanceID)
+        -- print("Map ID", mapId)
+        -- print("Lfg Dungeon ID: ", LfgDungeonID)
+
+        -- self:InitializeBossDropdown(self.currentInstanceID, difficultyName)
+        -- self:ShowNote(self.currentInstanceID, nil, nil) -- show first boss
+
+
     else 
-        print('Not in instance')
+        --print('Not in instance')
         --TODO REMOVE THIS, need to hide frame, but give user ability to vewi frames from map icon and settings.
         --self:InitializeBossDropdown(643)
         --self:ShowNote(643, nil, nil) -- show first boss
@@ -54,4 +76,38 @@ function ns:UNIT_TARGET(unitTarget)
 	    end
         
     end
+end
+
+function ns:UPDATE_INSTANCE_INFO(event)
+    print('E:UPDATE_INSTANCE_INFO')
+    name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
+
+    self.currentInstanceID = instanceID
+    self.currentDifficulty = difficultyName
+
+    -- print("Name: ", name)
+    -- print("Instance Type: ", instanceType)
+    -- print("Difficulty: ", difficultyName)
+    -- print("Difficulty ID: ", difficultyID)
+    -- print("Instance ID: ", instanceID)
+    -- print("Map ID", mapId)
+    -- print("Lfg Dungeon ID: ", LfgDungeonID)
+
+    inInstance, instanceType = IsInInstance()
+
+    if inInstance then
+        self:InitializeBossDropdown(self.currentInstanceID, difficultyName)
+        self:ShowNote(self.currentInstanceID, nil, nil) -- show first boss
+    else 
+        if ns:IsFrameShown() then
+            ns:HideFrame()
+        end
+        --print('Not in instance')
+    end
+end
+
+function ns:ENCOUNTER_START(event, encounterID, encounterName, difficultyID, groupSize)
+    print("E:ENCOUNTER_START")
+    print(encounterID, encounterName, difficultyID, groupSize)
+    self:ShowNote(self.currentInstanceID, nil, encounterID)
 end

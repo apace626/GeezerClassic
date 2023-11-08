@@ -1,13 +1,21 @@
 local addonName, ns = ...
 
 local function S(id)
-    --local name, _, icon = GetSpellInfo(id)
-    return "123"
-    --return string.format("|T%s:0|t|cff71d5ff%s|r", icon, name)
+    local name, _, icon = GetSpellInfo(id)
+    --print(name, _, icon)
+    if not name then
+        return "[Spell]"
+    else
+        return string.format("|T%s:0|t|cff71d5ff%s|r", icon, name)
+    end
 end
 
 function ns:ClassicInitializeData()
-     
+
+    local name, _, icon = GetSpellInfo(6742)
+    print(name, _, icon)
+
+
     -- Shadowfang Keep
     ns.data[33] = {
         name = "Shadowfang Keep",
@@ -63,101 +71,152 @@ function ns:ClassicInitializeData()
     ns.data[34] = {
         name = "The Stockade",
         {
-            npcID = 46254,
-            encounterID = 1144, 
-            bossName= "Hogger",
+            npcID = 1696,
+            encounterID = 0, 
+            bossName= "Targorr the Dread",
             notes = {
-                "At 30% the boss will "..S(86736).."",
-                "Interrupt "..S(86620)..".",
+                "Make sure to CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "Make sure to kill the CC'ed add once the boss and the first add are dead"
             }
         },
         {
-            npcID = 46264,
-            encounterID = 1145, 
-            bossName= "Lord Overheat",
+            npcID = 1666,
+            encounterID = 0, 
+            bossName= "Kam Deepfury",
             notes = {
-                "Move out of "..S(86636).."",
-                "TANK'N'SPANK",
+                "Make sure to CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "Make sure to kill the CC'ed add once the boss and the first add are dead",
+                S(8242).." stuns target for 2 sec."
             }
         },
         {
-            npcID = 46383,
-            encounterID = 1146, 
-            bossName= "Randolph Moloch",
+            npcID = 1717,
+            encounterID = 0, 
+            bossName= "Hamhock",
             notes = {
-                "Boss will "..S(55964).." and pop up elsewhere.",
-                "Face the boss away from the party to avoid cleave from "..S(86729).."",
+                "Make sure to CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "Make sure to kill the CC'ed add once the boss and the first add are dead",
+                "Interrupt "..S(421)..".",
             }
         },
+        {
+            npcID = 1716,
+            encounterID = 0, 
+            bossName= "Bazil Thredd",
+            notes = {
+                S(7964).." stuns nearby enemies for 4 sec.",
+                "Keep tank topped off before "..S(7964),
+                "Tank and Spank"
+            }
+        },
+        {
+            npcID = 1663,
+            encounterID = 0, 
+            bossName= "Dextren Ward",
+            notes = {
+                S(5246).." fears nearby players for 8 sec.",
+                "Make sure to clear all of the adds in the surrounding corridors, so no one in your group mistakenly pulls additional adds during the fear duration.",
+                "CC any missed adds."
+            }
+        },
+        {
+            npcID = 1720,
+            encounterID = 0, 
+            bossName= "Bruegal Ironknuckle (Rare)",
+            notes = {
+                "Tank and Spank"
+            }
+        }
     }
     
     -- Deadmines
     ns.data[36] = {
         name = "Deadmines",
         {
-            npcID = 47162,
-            encounterID = 1064, 
-            bossName= "Glubtok",
+            npcID = 644,
+            encounterID = 0, 
+            bossName= "Rhahk'zor",
             notes = {
-                "Boss will Blink teleporting to a new location.",
-                "Avoid blossoms launched around room.",
-                "[H] Fire & Frost Blossoms summon mobs when land.",
-                "[H] Avoid rotating Fire Wall.",
+                "Both adds can be pulled without pulling Rhahk'Zor himself. Kill adds first.",
+                S(6304).." stuns player for 3 sec.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 47296,
-            encounterID = 1065, 
-            bossName= "Helix Gearbreaker",
+            npcID = 3586,
+            encounterID = 0, 
+            bossName= "Miner Johnson (Rare)",
             notes = {
-                "Kill the Oaf mount, then the boss.",
-                "Watch out for "..S(88352)..", avoid these on ground.",
-                "[H] Stay spread out for "..S(88352).."",
-                "[H] Way more "..S(88352).."",
+                "Kill nearby adds first.",
+                S(12097).." reduces target's armor by 75% for 20 sec.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 43778,
-            encounterID = 1063, 
-            bossName= "Foe Reaper 5000",
+            npcID = 642,
+            encounterID = 0, 
+            bossName= "Sneed's Shredder",
             notes = {
-                "To activate boss kill all the other foe reapers.",
-                "Face the boss away from the party to avoid "..S(88521).." cleave.",
-                "Simple Tank'n'Spank ",
-                "[H] activating boss summons adds, DPS should adds by piloting a reaper.",
+                "Kill nearby adds first.",
+                S(7399).." causes a player to flee for 4 sec.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 47626,
-            encounterID = 1062, 
-            bossName= "Admiral Ripsnarl",
+            npcID = 1763,
+            encounterID = 0, 
+            bossName= "Gilnid",
             notes = {
-                "Face the boss away from the party to avoid "..S(88839).." cleave.",
-                "Boss will charge players with "..S(88836)..", knocking them down.",
-                "During Fog kill the adds.",
-                "TANK: Taunt the boss when he reappears.",
-                "[H] more adds.",
+                "Boss is flanked by a Goblin Engineer that will pull once Gilnid has been engaged. Make sure to CC the engineer as he may cast "..S(3605)..", which summons a mechanical robot that is immune to most abilities",
+                "If the robot does get summoned, focus the engineer that summoned it as the robot will despawn once its summoner is dead.",
+                "You can avoid this headache by simply CCing the add before the pull.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 47739,
-            encounterID = 1060, 
-            bossName= "Cookie",
+            npcID = 646,
+            encounterID = 0, 
+            bossName= "Mr. Smite",
             notes = {
-                "Attack when boss is inside the cauldron.",
-                "Avoid green foods"
+                "Kill both adds first. You can pull left add without pulling boss.",
+                S(6432).." will stun everyone for nearly 10 seconds. Cast at 66% and 33% HP.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 49541,
-            encounterID = 1081, 
-            bossName= "Vanessa VanCleef [H]",
+            npcID = 647,
+            encounterID = 0, 
+            bossName= "Captain Greenskin",
             notes = {
-                "You will be transported into waves of nightmares to fight your way through.",
-                "When she casts Fiery Blaze to detonate explosives around ship run to a rope & swing to safety (ropes by edge of ship on floor).",
-                "Calls Defias mobs to aid her.",
+                "CC Defias Squallshaper next to Greenskin before the pull.",
+                "Once you've engaged the boss, begin by killing the Defias Companion first as it is non-elite and will die quickly.",
+                "Kill the remaining Defias Pirates and then boss.",
+                S(15496).." face boss away from group."
             }
         },
+        {
+            npcID = 639,
+            encounterID = 0, 
+            bossName= "Edwin Van Cleef",
+            notes = {
+                "Kills adds first. CC one and kill other.",
+                "Once he hits 50% health, he will summon 2 more adds for you to deal with.",
+                "Tank and Spank"
+            }
+        },
+        {
+            npcID = 645,
+            encounterID = 0, 
+            bossName= "Cookie (Bonus Boss)",
+            notes = {
+                "Pull Cookie off the ship towards the exit of the dungeon. Try to avoid other mobs.",
+                "Interrupt " ..S(15496),
+                "Tank and Spank"
+            }
+        }
     }
     
     -- Wailing Caverns

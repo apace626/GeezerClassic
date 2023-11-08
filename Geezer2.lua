@@ -82,7 +82,6 @@ function ns:IsInstanceBoss(instanceID, npcID)
 end
 
 function ns:InsertNote(noteTable, note)
-
     local timewalking = '[H/TW]'
     local heroic = '[H]'
     local mythic = '[M]'
@@ -165,5 +164,6 @@ end
 
 ns:ClassicInitializeData()
 ns:BuildFrame()
+ns:BuildOptionsFrame()
 --ns:ToggleRandom()
-ns:SearchNotes("Shadow")
+--ns:SearchNotes("Shadow")
