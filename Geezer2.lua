@@ -7,8 +7,8 @@ ns.data = {}
 
 
 function ns:ToggleRandom()
-    if frame:IsShown() then
-        frame:Hide()
+    if ns:IsFrameShown() then
+        ns:HideFrame()
     else
         -- Choose random note
         local instances = {}

@@ -19,9 +19,9 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
 end)
 
 function ns:PLAYER_ENTERING_WORLD(isInitialLogin, isReloadingUi)
-    print("E:PLAYER_ENTERING_WORLD", isInitialLogin, isReloadingUi)
+    --print("E:PLAYER_ENTERING_WORLD", isInitialLogin, isReloadingUi)
     inInstance, instanceType = IsInInstance()
-    print(inInstance)
+    
     --if IsInInstance() then
     if inInstance then
         --RequestRaidInfo() -- will trigger UPDATE_INSTANCE_INFO event
@@ -60,6 +60,9 @@ function ns:UNIT_TARGET(unitTarget)
         local class = UnitClass("unit")
         local isEnemy = UnitIsEnemy("player","target")
 
+        print(name)
+        print('IsEnemy', isEnemy)
+
         if guid then
             --local link = unitLink:format(guid, name) -- clickable link
             local unit_type = strsplit("-", guid)
@@ -79,17 +82,17 @@ function ns:UNIT_TARGET(unitTarget)
 end
 
 function ns:UPDATE_INSTANCE_INFO(event)
-    print('E:UPDATE_INSTANCE_INFO')
+    --print('E:UPDATE_INSTANCE_INFO')
     name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
 
     self.currentInstanceID = instanceID
     self.currentDifficulty = difficultyName
 
-    -- print("Name: ", name)
-    -- print("Instance Type: ", instanceType)
-    -- print("Difficulty: ", difficultyName)
+    print("Name: ", name)
+    print("Instance Type: ", instanceType)
+    print("Difficulty: ", difficultyName)
     -- print("Difficulty ID: ", difficultyID)
-    -- print("Instance ID: ", instanceID)
+    print("Instance ID: ", instanceID)
     -- print("Map ID", mapId)
     -- print("Lfg Dungeon ID: ", LfgDungeonID)
 
@@ -107,7 +110,7 @@ function ns:UPDATE_INSTANCE_INFO(event)
 end
 
 function ns:ENCOUNTER_START(event, encounterID, encounterName, difficultyID, groupSize)
-    print("E:ENCOUNTER_START")
+    --print("E:ENCOUNTER_START")
     print(encounterID, encounterName, difficultyID, groupSize)
     self:ShowNote(self.currentInstanceID, nil, encounterID)
 end

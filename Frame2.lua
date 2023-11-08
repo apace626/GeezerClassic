@@ -11,12 +11,14 @@ function ns:BuildFrame()
     -- build frame
     frame:SetMovable(true)
     frame:EnableMouse(true)
+    frame:SetUserPlaced(true)
     frame:RegisterForDrag("LeftButton")
     frame:SetScript("OnDragStart", frame.StartMoving)
     frame:SetScript("OnDragStop", frame.StopMovingOrSizing)
     frame:SetFrameStrata("BACKGROUND")
     frame:SetWidth(300)
     frame:SetHeight(100)
+    frame:SetScale(.85)
 
     local titleText = frame:CreateFontString(nil, "BACKGROUND")
     titleText:SetFontObject("GameFontNormalLarge")
@@ -48,8 +50,6 @@ function ns:BuildFrame()
             notesText:Hide()
             collapseButton:SetNormalTexture("Interface\\Buttons\\UI-Panel-ExpandButton-Up")
         end
-
-        --notesHidden = not notesHidden
     end)
 
     local searchButton = CreateFrame("Button", addon_name, frame, "UIPanelButtonTemplate")
@@ -129,14 +129,8 @@ function ns:BuildFrame()
 end
 
 function WPDropDownDemo_OnClick(self, arg1, arg2, checked)
-    print(arg1)
     ns:InitializeBossDropdown(arg1)
     ns:ShowNote(arg1, nil, nil)
-    -- if arg1 == 1 then
-    --     print("You can continue to believe whatever you want to believe.")
-    -- elseif arg1 == 2 then
-    --     print("Let's see how deep the rabbit hole goes.")
-    -- end
 end
 
 function WPDropDownDemo_Menu(frame, level, menuList)
@@ -173,9 +167,8 @@ function WPDropDownDemo_Menu(frame, level, menuList)
 end
 
 function sortbyName(a,b)
-    print(a,b)
     return a.name < b.name
-  end
+end
 
 function ns:BuildOptionsFrame()
 
@@ -184,23 +177,30 @@ function ns:BuildOptionsFrame()
     InterfaceOptions_AddCategory(panel)  -- see InterfaceOptions API
 
     -- add widgets to the panel as desired
-    local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalLarge")
-    title:SetPoint("TOP")
-    title:SetText("MyAddOn")
+    -- local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalLarge")
+    -- title:SetPoint("TOP")
+    -- title:SetText("MyAddOn")
 
     local btn = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
 	btn:SetPoint("TOPLEFT")
-	btn:SetText("Show Random Note")
-	btn:SetWidth(100)
+	btn:SetText("Show/Hide")
+	btn:SetWidth(150)
 	btn:SetScript("OnClick", function()
-		print("You clicked me!")
+		ns:ToggleRandom()
 	end)
 
     local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
-    dropDown:SetPoint("TOPRIGHT")
+    dropDown:SetPoint("TOPLEFT", -20, -40)
     UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
     -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
-    UIDropDownMenu_SetText(dropDown, "Select Classic")
+    UIDropDownMenu_SetText(dropDown, "Classic")
+    UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
+
+    local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
+    dropDown:SetPoint("TOPLEFT", 200, -40)
+    UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
+    -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
+    UIDropDownMenu_SetText(dropDown, "WotLK")
     UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
 
 
@@ -245,7 +245,6 @@ function ns:InitializeBossDropdown(instanceID, difficultyName)
 
         
     else
-        --self:Print("No instance data found.")
         self:HideFrame()
     end
 end
@@ -263,26 +262,9 @@ function ns:ShowFrame()
     frame:Show()
 end
 
-function ns:HideFrame()
-    frame:Hide()
-end
-
 function ns:IsFrameShown()
     return frame:IsShown()
 end
 
-function ns:ToggleRandom()
-    if frame:IsShown() then
-        frame:Hide()
-    else
-        -- Choose random note
-        local instances = {}
-        for key, value in pairs(ns.data) do
-            table.insert(instances, key)
-        end
-        local instance = instances[math.random(#instances)]
-        self:ShowNote(instance)
-    end
-end
 
 

@@ -1,7 +1,7 @@
 local addonName, addon = ...
 --if not addon.healthCheck then return end
 local L = addon.L
-print('IM HERE')
+
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1", true)
 if not ldb then return end
 

@@ -12,10 +12,6 @@ end
 
 function ns:ClassicInitializeData()
 
-    local name, _, icon = GetSpellInfo(6742)
-    print(name, _, icon)
-
-
     -- Shadowfang Keep
     ns.data[33] = {
         name = "Shadowfang Keep",
@@ -77,8 +73,8 @@ function ns:ClassicInitializeData()
             encounterID = 0, 
             bossName= "Targorr the Dread",
             notes = {
-                "Make sure to CC at least one Defias add before engaging boss.",
-                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "If you can CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add face boss away from the CC'ed add. Kill add first.",
                 "Make sure to kill the CC'ed add once the boss and the first add are dead"
             }
         },
@@ -87,8 +83,8 @@ function ns:ClassicInitializeData()
             encounterID = 0, 
             bossName= "Kam Deepfury",
             notes = {
-                "Make sure to CC at least one Defias add before engaging boss.",
-                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "If you can CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add face boss away from the CC'ed add. Kill add first.",
                 "Make sure to kill the CC'ed add once the boss and the first add are dead",
                 S(8242).." stuns target for 2 sec."
             }
@@ -98,8 +94,8 @@ function ns:ClassicInitializeData()
             encounterID = 0, 
             bossName= "Hamhock",
             notes = {
-                "Make sure to CC at least one Defias add before engaging boss.",
-                "Allow your tank to pick up the remaining add and boss away from the CC'ed add. Kill add first.",
+                "If you can CC at least one Defias add before engaging boss.",
+                "Allow your tank to pick up the remaining add face boss away from the CC'ed add. Kill add first.",
                 "Make sure to kill the CC'ed add once the boss and the first add are dead",
                 "Interrupt "..S(421)..".",
             }
