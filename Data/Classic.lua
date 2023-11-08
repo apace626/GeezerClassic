@@ -361,75 +361,57 @@ function ns:ClassicInitializeData()
             encounterID = 1667, 
             bossName= "Ghamoo-Ra",
             notes = {
-                "Move out way of lightning pool on ground, spins around then charges forward - "..S(149865),
-                "Hits random targets with "..S(151681).." during fight."
+                "Tank and Spank"
             }
         },
         {
-            npcID = 74565,
-            encounterID = 1669, 
-            bossName= "Subjugator Kor'ul",
+            npcID = 4831,
+            encounterID = 1667, 
+            bossName= "Lady Sarevess",
             notes = {
-                "Grabs a player with "..S(150634)..".",
-                ""..S(151159).." summons tentacles to hit ground (move out of the crumbling floor).",
+                "Clear out cave before pulling her.",
+                "Kill her 2 bodyguards (CC one if you can), before focusing her down.",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 164266,
-            encounterID = 1668, 
-            bossName= "Domina",
+            npcID = 6243,
+            encounterID = 1667, 
+            bossName= "Gelihast",
             notes = {
-                "Avoid standing in "..S(149893).." (purple line on floor).",
-                "Run away from "..S(149886).." (green bolts).",
+                "Clear out room before killing boss.",
+                "Tank and Spank",
+                "Once dead click on latar behind boss to receive buff."
             }
         },
         {
-            npcID = 74728,
-            encounterID = 1671, 
-            bossName= "Twilight Lord Bathiel",
+            npcID = 4832,
+            encounterID = 1667, 
+            bossName= "Twilight Lord Kelris",
             notes = {
-                ""..S(150020).." summons adds then boss absorbs them to heal, kill what you can.",
-                "Run away from "..S(151813)..", ice shards fall & follow enemies.",
+                S(8399).." puts alls target within 30 yd to sleep for 10 sec.",
+                "Help heal if healer is put to sleep.",
+                "Tank and Spank",
+                "After boss is dead click on ONE brazier at a time. Kill wave of mobs. Door behind will open when done."
             }
         },
         {
-            npcID = 75408,
-            encounterID = 1672, 
-            bossName= "Aku'mai",
+            npcID = 4830,
+            encounterID = 1667, 
+            bossName= "Old Serra'Kis (Optional)",
             notes = {
-                "Move around to avoid damage from falling rocks.",
-                ""..S(151303).." summons tentacles that hit the ground (move out of the crumbling floor).",
+                "Tank and Spank"
             }
         },
         {
-            npcID = 75410,
-            encounterID = 1676, 
-            bossName= "Guardian of the Deep",
+            npcID = 4829,
+            encounterID = 1667, 
+            bossName= "Aku'Mai",
             notes = {
-                "Does aoe damage with "..S(149916).." (circle echoes out).",
-                S(152753).." summons adds.",
-                "Heals himself when eats a Blue Shale Crawler - "..S(149920),
+                "Stay away from "..S(3815),
+                S(3490).." causes a lot of damage. Healer be ready.",
             }
-        },
-        {
-            npcID = 74988,
-            encounterID = 1670, 
-            bossName= "Executioner Gore",
-            notes = {
-                "Move out of purple line/frontal cone - "..S(149943),
-                "Avoid standing in the purple circles left on ground.",
-                "Interrupt "..S(149955)..", grabs a player draining their health."
-            }
-        },
-        {
-            npcID = 74505,
-            encounterID = 1675, 
-            bossName= "Thruk",
-            notes = {
-                ""..S(149908).." pulls in & roots a player in a fishing net.",
-                ""..S(149913).." smashes the ground around him, move away.",
-            }
-        },
+        }
     }
     
     -- Uldaman
@@ -441,7 +423,7 @@ function ns:ClassicInitializeData()
             encounterID = 547, 
             bossName= "Revelosh",
             notes = {
-                "TANK'N'SPANK",
+                "Tank and Spank",
                 "Interrupt "..S(16006).."",
                 "Interrupt "..S(15801).."",
             }
@@ -463,7 +445,7 @@ function ns:ClassicInitializeData()
             notes = {
                 "Face boss away for frontal cone - "..S(8374),
                 S(11876).." will stun you",
-                S(110762).." will knock you away"
+                S(18670).." will knock you away"
             }
         },
         {
@@ -472,7 +454,7 @@ function ns:ClassicInitializeData()
             bossName= "Ancient Stone Keeper",
             notes = {
                 "Clear the room of all adds before engaging.",
-                "TANK'N'SPANK"
+                "Tank and Spank"
             }
         },
         {
@@ -480,7 +462,7 @@ function ns:ClassicInitializeData()
             encounterID = 552, 
             bossName= "Galgann Firehammer",
             notes = {
-                "TANK'N'SPANK with lots of magic damage.",
+                "Tank and Spank with lots of magic damage.",
                 "The adds are interruptible.",
             }
         },
@@ -489,6 +471,7 @@ function ns:ClassicInitializeData()
             encounterID = 553, 
             bossName= "Grimlok",
             notes = {
+                "Kill boss first to avoid him casting "..S(7289) ..". Kill remaining adds.",
                 "Interrupt "..S(8292).."",
                 "Interrupt "..S(12167).."",
             }
@@ -498,10 +481,11 @@ function ns:ClassicInitializeData()
             encounterID = 554, 
             bossName= "Archaedas",
             notes = {
-                "The boss will summon a lot of adds during the fight.",
-                "When the boss reaches 66% HP he will "..S(10252).."s",
+                "Boss summons a lot of adds, focus kill.",
+                "When the boss reaches 66% HP he will "..S(10252),
                 "When the boss reaches 33% HP he will "..S(10258).."s, they can stun you",
                 ""..S(6524).." can stun you.",
+                "At 20% boss summons 4 adds that will die with him. Focus kill boss."
             }
         },
         {

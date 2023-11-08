@@ -193,7 +193,7 @@ function ns:BuildOptionsFrame()
     dropDown:SetPoint("TOPLEFT", -20, -80)
     UIDropDownMenu_SetWidth(dropDown, 200) -- Use in place of dropDown:SetWidth
     -- Bind an initializer function to the dropdown; see previous sections for initializer function examples.
-    UIDropDownMenu_SetText(dropDown, "Select Classic Instance")
+    UIDropDownMenu_SetText(dropDown, "Select Classic Dungeon")
     UIDropDownMenu_Initialize(dropDown, WPDropDownDemo_Menu)
 
     local title = panel:CreateFontString("ARTWORK", nil, "GameFontNormalSmall")
