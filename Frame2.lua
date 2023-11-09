@@ -214,7 +214,7 @@ function ns:BuildOptionsFrame()
 
     local title = panel:CreateFontString("ARTWORK", nil, "GameTooltipTextSmall")
     title:SetPoint("TOPLEFT", 0, -220)
-    title:SetText("wow-geezer@gmail.com")
+    title:SetText("wowaddongeezer@gmail.com")
 
     -- local dropDown = CreateFrame("Frame", "WPDemoDropDown", panel, "UIDropDownMenuTemplate")
     -- dropDown:SetPoint("TOPLEFT", 200, -40)
