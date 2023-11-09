@@ -838,7 +838,7 @@ function ns:ClassicInitializeData()
             encounterID = 275, 
             bossName= "Overlord Wyrmthalak",
             notes = {
-                "Face the boss away from the party with back against wall".,
+                "Face the boss away from the party with back against wall",
                 "He will summon adds during the fight when he reaches 50% health."
             }
         },
@@ -848,6 +848,16 @@ function ns:ClassicInitializeData()
     ns.data[230] = {
         name = "Blackrock Depths",
         instanceType = 1,
+        {
+            npcID = 9018,
+            encounterID = 227, 
+            bossName= "High Interrogator Gerstahn",
+            notes = {
+                "Dispel "..S(14032).." and Interrupt "..S(14033)..".",
+                ""..S(13704).." will fear you. Avoid if possible.",
+                "She drops Prison Cell Key, which is used to complete quests in the Detention Block"
+            }
+        },
         {
             npcID = 9502,
             encounterID = 239, 
@@ -859,21 +869,11 @@ function ns:ClassicInitializeData()
             }
         },
         {
-            npcID = 9018,
-            encounterID = 227, 
-            bossName= "High Interrogator Gerstahn",
-            notes = {
-                "Interrupt "..S(14033)..".",
-                ""..S(13704).." will fear you.",
-            }
-        },
-        {
             npcID = 9025,
             encounterID = 228, 
             bossName= "Lord Roccor",
             notes = {
-                "Boss deals mostly magic damage.",
-                ""..S(6524).." can stun you.",
+                "Tank and Spank",
             }
         },
         {
@@ -881,9 +881,8 @@ function ns:ClassicInitializeData()
             encounterID = 229, 
             bossName= "Houndmaster Grebmar",
             notes = {
-                ""..S(171402).." will make you weaker.",
-                "Boss can use "..S(21049).." ",
-                "Boss will flee at 15% health.",
+                "Kill pack of hounds when boss is furthest away.",
+                "Tank and Spank"
             }
         },
         {
@@ -898,10 +897,19 @@ function ns:ClassicInitializeData()
         {
             npcID = 9024,
             encounterID = 231, 
-            bossName= "Pyromancer Loregrain",
+            bossName= "Pyromancer Loregrain (Optional)",
             notes = {
-                "Focus kill the "..S(15038).."",
-                "Interrupt "..S(15095)..".",
+                "Destroy totem",
+                "Tank and Spank"
+            }
+        },
+        {
+            npcID = 9016,
+            encounterID = 235, 
+            bossName= "Bael'Gar (Optional)",
+            notes = {
+                "Kill adds",
+                "Face boss away from group."
             }
         },
         {
@@ -909,6 +917,7 @@ function ns:ClassicInitializeData()
             encounterID = 232, 
             bossName= "Lord Incendius",
             notes = {
+                "Do not get knocked off of platform.",
                 "Move out of fire zones from "..S(13900).." and "..S(13899)..".",
                 ""..S(14099).." will knock you back.",
                 ""..S(26977).." will make you weaker to fire damage, so save cooldowns for this.",
@@ -934,15 +943,7 @@ function ns:ClassicInitializeData()
                 "Do NOT hit an enemy buffed with SEAL, or you will heal them back up.",
             }
         },
-        {
-            npcID = 9016,
-            encounterID = 235, 
-            bossName= "Bael'Gar",
-            notes = {
-                ""..S(23379).." is magic damage and will leave a long magic DoT.",
-                "The boss will "..S(13895)..", move away from the boss to avoid AOE damage.",
-            }
-        },
+       
         {
             npcID = 9033,
             encounterID = 236, 
@@ -977,7 +978,7 @@ function ns:ClassicInitializeData()
             bossName= "Plugger Spazzring",
             notes = {
                 "Steal food and drinks from the table 3 times to fight him.",
-                "Tank'N'Spank",
+                "Tank and Spank",
                 "Killing him unlocks the Bar Door and everyone will attack you.",
             }
         },
@@ -986,7 +987,8 @@ function ns:ClassicInitializeData()
             encounterID = 242, 
             bossName= "Ambassador Flamelash",
             notes = {
-                "Tank'N'Spank",
+                "Kill adds before they reach him.",
+                "Tank and Spank",
             }
         },
         {
@@ -1017,7 +1019,7 @@ function ns:ClassicInitializeData()
             notes = {
                 ""..S(17492).." will stun you",
                 ""..S(15636).." will make the boss immune to magic damage and will hurt you every time you hit him for 10s, pop a cooldown before you attack",
-                "Interrupt all spels of the High Priestess of Thaurissan",
+                "Interrupt all spells of the High Priestess of Thaurissan",
             }
         },
     }
@@ -1181,7 +1183,7 @@ function ns:ClassicInitializeData()
             bossName= "Razorlash",
             notes = {
                 "Face the boss away from the party to avoid "..S(40504).."",
-                "Tank'N'Spank",
+                "Tank and Spank",
             }
         },
         {
@@ -1198,9 +1200,8 @@ function ns:ClassicInitializeData()
             encounterID = 424, 
             bossName= "Lord Vyletongue",
             notes = {
-                "Focus kill the Shadowstalker guards adds.",
-                "Move away from the player targeted"..S(7964)..", this stuns.",
-                "Spread out for "..S(21390)..", this cleaves.",
+                "Group stack on boss.",
+                "Focus kill the Shadowstalker guards adds after boss is dead."
             }
         },
         {
@@ -1218,6 +1219,7 @@ function ns:ClassicInitializeData()
             encounterID = 426, 
             bossName= "Landslide",
             notes = {
+                "Tank with back against a wall",
                 ""..S(110762).." will knocks back current target.",
                 ""..S(21808).." will stun you and summons adds"
             }
@@ -1371,7 +1373,7 @@ function ns:ClassicInitializeData()
             encounterID = 343, 
             bossName= "Zevrim Thornhoof",
             notes = {
-                "TANK'N'SPANK",
+                "Tank and Spank",
                 ""..S(22651).." teleports a player to the altar taking them out of the fight & leeching their health.",
             }
         },
@@ -1459,7 +1461,7 @@ function ns:ClassicInitializeData()
             encounterID = 362, 
             bossName= "Guard Mol'dar",
             notes = {
-                "TANK'N'SPANK",
+                "Tank and Spank",
                 "Be ready to pick up any adds that join the fight.",
                 "Goes into "..S(8269)..".",
             }
@@ -1479,7 +1481,7 @@ function ns:ClassicInitializeData()
             encounterID = 364, 
             bossName= "Guard Fengus",
             notes = {
-                "TANK'N'SPANK",
+                "Tank and Spank",
                 "Clear an area to fight in and focus kill any adds that join the fight.",
                 "Goes into "..S(8269)..".",
             }
@@ -1489,7 +1491,7 @@ function ns:ClassicInitializeData()
             encounterID = 365, 
             bossName= "Guard Slip'kik",
             notes = {
-                "TANK'N'SPANK",
+                "Tank and Spank",
                 "Focus kill any adds that join the fight",
                 "Can freeze target with "..S(22856).."",
                 "Goes into "..S(8269)..".",
